@@ -1,0 +1,48 @@
+class Form {
+     constructor(){
+        this.title = createElement('h1')
+        this.button = createButton('Play')
+        this.input = createInput('Name')
+        this.greeting = createElement('h2')
+    }   
+
+
+        hide(){
+            this.button.hide()
+            this.title.hide()
+            this.input.hide()
+            this.greeting.hide()
+
+        }
+
+        display(){
+            this.title.html('Car Racing Game')
+            this.title.position(130,0)
+            this.input.position(130,160)
+            this.button.position(230,250)
+
+            this.button.mousePressed(()=>{
+                this.input.hide()
+                this.button.hide()
+                player.name = this.input.value()
+                playerCount += 1;
+                player.index = playerCount
+                player.update()
+                player.updateCount(playerCount)
+                this.greeting.html('Welcome ' + player.name)
+                this.greeting.position(130,250)
+            })
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+}
